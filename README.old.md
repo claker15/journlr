@@ -1,2 +1,0 @@
-# journlr
-A journaling app
