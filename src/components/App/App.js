@@ -1,15 +1,18 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
 import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
 import HomeComponent from '../Home/Home'
+import Nav from '../Nav/Nav'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route path='/' component={HomeComponent}></Route>
-    </BrowserRouter>
-    
+    <div>
+      <Nav></Nav>
+      <BrowserRouter>
+        <Route path='/' component={HomeComponent}></Route>
+      </BrowserRouter>
+    </div>
   );
 }
 
