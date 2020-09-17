@@ -18,7 +18,7 @@ export default class NavBar extends React.Component {
                         <Navbar.Brand>Journlr</Navbar.Brand>   
                     </Nav>
                     <Nav className='ml-auto'>
-                        <Button href='/'>Login</Button>
+                        <Button href='/login'>Login</Button>
                     </Nav>
                 </Navbar>
             </div>
