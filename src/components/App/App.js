@@ -3,6 +3,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
 import HomeComponent from '../Home/Home'
 import Nav from '../Nav/Nav'
+import EntryContainer from '../EntryContainer/EntryContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div>
       <Nav></Nav>
       <BrowserRouter>
-        <Route path='/' component={HomeComponent}></Route>
+        <Route exact path='/' component={HomeComponent}></Route>
+        <Route path='/create' component={EntryContainer}></Route>
       </BrowserRouter>
     </div>
   );

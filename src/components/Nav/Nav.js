@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import './Nav.scss';
+import './Nav.css';
 
 export default class NavBar extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
             <div>
                 <Navbar className="custnav" expand='lg' variant='light'>
                     <Nav>
-                        <Navbar.Brand>Journlr</Navbar.Brand>   
+                        <Navbar.Brand href='/'>Journlr</Navbar.Brand>   
                     </Nav>
                     <Nav className='ml-auto'>
                         <Button href='/login'>Login</Button>

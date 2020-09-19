@@ -3,26 +3,23 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Popover from 'react-bootstrap/Popover'
-
 import Row from 'react-bootstrap/Row'
-import './Home.scss'
+import './Home.css'
 
 
 export default class HomeComponent extends React.Component {
     constructor(props){
         super(props);
         this.state={date: new Date(), scroll: 0, inputDate: new Date()};
-        this.datePickerHandler = this.datePickerHandler.bind(this)
+        
     }
 
-    datePickerHandler(e) {
+    datePickerHandler= (e) => {
         this.setState({inputDate: e.target.value})
     }
 
     render(){
-        const styles = {
-            animationDelay: 'calc(' + this.state.scroll + ' * -1s)'
-        }
+
         return(
             <Container >
                 <Row className='justify-content-center'> 

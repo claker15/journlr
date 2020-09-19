@@ -1,0 +1,29 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: 35% auto;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    margin-left: 5%;
+}  
+.innerGrid {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.oddDiv {
+    background-color: pink;
+}
+.leftText {
+    grid-area: 1 1 auto 4;
+    background-color: white;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    box-shadow: 10px grey 5px lightgrey;
+}
+body {
+    background-image: linear-gradient(to right, #f1f1f1, white);
+}
