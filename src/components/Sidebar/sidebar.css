@@ -1,0 +1,7 @@
+.Sidebar {
+    background-color: lightblue;
+    position: fixed;
+    margin-top: 50px;
+    height: 100%;
+    width: 12%;
+}

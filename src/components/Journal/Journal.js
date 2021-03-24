@@ -15,6 +15,7 @@ const Journal = () => {
 
     return (  
         <div className="container">
+            <h2>New Journal entry</h2>
             <textarea value={text} onChange={(event) => setText(event.target.value) }></textarea>
             <button onClick={() => setMood("0")}><Mood tag={thumb}>good</Mood></button>
             <button onClick={() => setMood("1")}><Mood tag={thumbdown}></Mood></button>
