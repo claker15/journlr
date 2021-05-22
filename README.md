@@ -1,3 +1,3 @@
 # journlr
-A journaling app
+A journaling app  
 Mainly a way to try out spring boot
