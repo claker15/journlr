@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfiguration {
 
     private String spotifyClientId = "4fd8c6ad55e14c3995f63d5c3200b450";
-    private String spotifySecret = "07742396ca484e89a71e64173114911a";
+
     
     @Bean(name="spotifyApi")
     public SpotifyApi spotifyApiService() {
