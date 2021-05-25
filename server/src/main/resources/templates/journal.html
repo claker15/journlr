@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="journal.css">
+    </head>
+    <body>
+        <h1>This is a form</h1>
+        <form action="#" th:action="@{/create}" th:object="${journal}" method="post">
+            <div class="input-field">
+                <textarea class="materialize-textarea" id="notesarea" th:field="*{note}"></textarea>
+                <label for="notesarea">Notes</label>
+            </div>
+            <p>song of the day: </p>
+            <div class="card small horizontal">
+                <div class="card-image">
+                    <img class="image" src="https://www.nj.com/resizer/_xEbUR4yqaJEJopmzfWiF3_RYfY=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.nj.com/home/njo-media/width2048/img/bergen_impact/photo/bg0611petjpg-4e9d3543d1649565.jpg">
+                </div>
+                <div class="card-content">
+                    <h5>Song title</h5>
+                    <h5>Artist</h5>
+                </div>
+                
+            </div>
+            <p>search for a song: <input type="text" th:field="*{songLink}" oninput="" id="songSearch"></p>
+            <p><input type="Submit" value="Submit"></p>
+        </form>
+    </body>
+    <script type="text/javascript">
+        async function autosearch() {
+            let val = document.getElementById("songSearch").value
+            console.log(val)
+            fetch("/songSearch/" + val).then(res => res.json()).then(tracks => console.log(tracks))
+        }
+    </script>
+</html>
